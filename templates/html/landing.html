@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ========== META TAGS ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- ========== TITLE & ASSETS ========== -->
+  <title>SIMONLAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/landingpage.css" />
+</head>
+
+<body>
+  <!-- ========== HEADER SECTION ========== -->
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="/static/img/logosimonlab.svg" alt="Logo SIMONLAB" class="logo-img" />
+    </div>
+    <nav>
+      <a href="#informasi">Informasi Kelas</a>
+      <a href="#about">About Us</a>
+    </nav>
+    <button class="login-btn" onclick="window.location.href='/login'">Login</button> 
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Sistem Monitoring <br>Lab. Komunikasi Jaringan<br><span>SIMONLAB</span></h1>
+      <p>Pemantauan informasi kelas terkini yang terintegrasi dengan sistem LED</p>
+    </div>
+    
+    <!-- Calendar/Schedule Box -->
+    <div class="schedule-box">
+      <div class="calendar-header">
+        <strong id="calendar-month">Juni</strong>
+        <div class="calendar-days">
+          <div class="calendar-day" data-day="0"><span id="day-date-0"></span><small id="day-name-0"></small></div>
+          <div class="calendar-day" data-day="1"><span id="day-date-1"></span><small id="day-name-1"></small></div>
+          <div class="calendar-day" data-day="2"><span id="day-date-2"></span><small id="day-name-2"></small></div>
+          <div class="calendar-day" data-day="3"><span id="day-date-3"></span><small id="day-name-3"></small></div>
+          <div class="calendar-day" data-day="4"><span id="day-date-4"></span><small id="day-name-4"></small></div>
+          <div class="calendar-day" data-day="5"><span id="day-date-5"></span><small id="day-name-5"></small></div>
+          <div class="calendar-day" data-day="6"><span id="day-date-6"></span><small id="day-name-6"></small></div>
+        </div>
+      </div>
+      <div id="schedule-list" class="calendar-body"></div>
+    </div>
+  </section>
+
+  <!-- ========== CLASS INFORMATION SECTION ========== -->
+  <section id="informasi" class="section" style="background:#f9f9fc">
+    <h2>Informasi Kelas</h2>
+    <div class="info-box" id="current-schedule-box">
+  <script src="/static/js/landing.js"></script>
+  </section>
+
+  <!-- ========== ABOUT US SECTION ========== -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <div class="about-intro">
+      <p>Website ini dibuat untuk menyelesaikan project akhir kelas D4 Teknik Telekomunikasi A Angkatan 2023</p>
+      <p><strong>Mata Kuliah Praktikum Komunikasi Data</strong></p>
+    </div>
+
+    <!-- Team Divisions Carousel -->
+    <div class="divisions-carousel-container">
+      <button class="carousel-btn left" onclick="scrollDivisions(-1)">❮</button>
+      
+      <div class="divisions-carousel">
+        <!-- Division 1 -->
+        <div class="division-card">
+          <h3>Divisi Perancangan</h3>
+          <div class="division-photo">
+            <img src="/static/img/perancangan.jpg" alt="Divisi Perancangan">
+          </div>
+          <div class="division-desc">
+            <p>Menyusun flow sistem secara menyeluruh, analisis kebutuhan perangkat keras dan lunak, serta mendefinisikan skenario penggunaan sistem.</p>
+          </div>
+        </div>
+
+        <!-- Division 2 -->
+        <div class="division-card">
+          <h3>Divisi Hardware</h3>
+          <div class="division-photo">
+            <img src="/static/img/hardware.jpg" alt="Divisi Hardware">
+          </div>
+          <div class="division-desc">
+            <p>Merancang dan merakit sistem LED Running Text, timer, mikrokontroler (ESP32), serta konektivitas internet dan daya.</p>
+          </div>
+        </div>
+
+        <!-- Division 3 -->
+        <div class="division-card">
+          <h3>Divisi Embedded Programming</h3>
+          <div class="division-photo">
+            <img src="/static/img/embedded.jpg" alt="Divisi Embedded">
+          </div>
+          <div class="division-desc">
+            <p>Pemrograman mikrokontroler untuk mengontrol LED display, membaca input jadwal, dan mengirim data ke server/website.</p>
+          </div>
+        </div>
+
+        <!-- Division 4 -->
+        <div class="division-card">
+          <h3>Divisi Web Development</h3>
+          <div class="division-photo">
+            <img src="/static/img/web.png" alt="Divisi Web">
+          </div>
+          <div class="division-desc">
+            <p>Membangun antarmuka web untuk monitoring jadwal dan histori penggunaan lab, termasuk dashboard admin/asisten lab.</p>
+          </div>
+        </div>
+
+        <!-- Division 5 -->
+        <div class="division-card">
+          <h3>Divisi Integrasi & IoT</h3>
+          <div class="division-photo">
+            <img src="/static/img/iot.jpg" alt="Divisi IoT">
+          </div>
+          <div class="division-desc">
+            <p>Menghubungkan sistem embedded dengan web server (API), sinkronisasi data cloud, serta pengujian komunikasi dua arah (ESP32-Web).</p>
+          </div>
+        </div>
+
+        <!-- Division 6 -->
+        <div class="division-card">
+          <h3>Divisi Telegram Bot</h3>
+          <div class="division-photo">
+            <img src="/static/img/telegram.jpg" alt="Divisi Telegram">
+          </div>
+          <div class="division-desc">
+            <p>Membuat dan mengintegrasikan bot Telegram untuk mengirim notifikasi real-time kepada asisten lab, serta pengaturan akses.</p>
+          </div>
+        </div>
+
+        <!-- Division 7 -->
+        <div class="division-card">
+          <h3>Divisi Dokumentasi</h3>
+          <div class="division-photo">
+            <img src="/static/img/dokumentasi.png" alt="Divisi Dokumentasi">
+          </div>
+          <div class="division-desc">
+            <p>Mengelola timeline proyek, dokumentasi teknis dan non-teknis (Keuangan), laporan perkembangan, serta komunikasi antar divisi.</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-btn right" onclick="scrollDivisions(1)">❯</button>
+    </div>
+
+    <div class="about-footer">
+      <p>Project ini diselesaikan oleh seluruh anggota kelas yang terbagi menjadi beberapa divisi seperti diatas.</p>
+      <p><strong>Politeknik Elektronika Negeri Surabaya</strong></p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER BANNER ========== -->
+  <section class="section footer-banner">
+    <h2>Semoga bermanfaat<br>Semangat!</h2>
+  </section>
+
+  <!-- ========== MAIN FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Need help with anything?</h3>
+        <p>
+          <a href="https://www.instagram.com/d4.qtelaeepis23" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" />
+          </a>
+          <a href="https://t.me/LabKomDatBot" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/telegram-app.png" alt="Telegram" />
+          </a>
+        </p>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Home</h4>
+          <p>Informasi Kelas</p>
+          <p>About Us</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <p>About</p>
+          <p>Blog</p>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <p>Contact</p>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <p>FAQs</p>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 SIMONLAB. Politeknik Elektronika Negeri Surabaya</p>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script src="/static/js/landing.js"></script>
+</body>
+</html>
